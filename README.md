@@ -77,7 +77,7 @@ $$
 * **Conditional Value at Risk (CVaR)**:
 
 $$
-\text{CVaR}_\alpha = \mathbb{E}[R | R \leq \text{VaR}_\alpha]
+\text{CVaR}_\alpha = \mathbb{E}\left[R \mid R \leq \text{VaR}_\alpha\right]
 $$
 
 * **Maximum Drawdown (MDD)**:
