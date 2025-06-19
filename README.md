@@ -66,27 +66,27 @@ Where:
 
 * **Sortino Ratio**:
 
-  $$
-  \text{Sortino} = \frac{\mathbb{E}[R - R_f]}{\sigma_\text{downside}}
-  $$
+$$
+\text{Sortino} = \frac{\mathbb{E}[R - R_f]}{\sigma_\text{downside}}
+$$
 
 * **Conditional Value at Risk (CVaR)**:
 
-  $$
-  \text{CVaR}_\alpha = \mathbb{E}[R | R \leq \text{VaR}_\alpha]
-  $$
+$$
+\text{CVaR}_\alpha = \mathbb{E}[R | R \leq \text{VaR}_\alpha]
+$$
 
 * **Maximum Drawdown (MDD)**:
 
-  $$
-  \text{MDD} = \min_t \left( \frac{V_t - \max_{s \leq t} V_s}{\max_{s \leq t} V_s} \right)
-  $$
+$$
+\text{MDD} = \min_t \left( \frac{V_t - \max_{s \leq t} V_s}{\max_{s \leq t} V_s} \right)
+$$
 
 * **Omega Ratio**:
 
-  $$
-  \Omega(r) = \frac{\int_r^\infty (1 - F(x)) dx}{\int_{-\infty}^r F(x) dx}
-  $$
+$$
+\Omega(r) = \frac{\int_r^\infty (1 - F(x)) dx}{\int_{-\infty}^r F(x) dx}
+$$
 
 ### 5. Evaluation Periods
 
