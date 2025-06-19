@@ -1,5 +1,0 @@
-﻿,Inter Mean±Std,Random Mean±Std,t-stat,p-value,Significance
-Sortino,nan ± nan,0.4714 ± 0.5316,nan,nan,
-CVaR,0.2528 ± 0.0000,-0.0403 ± 0.1117,82.9806,0.0000,***
-MDD,0.0000 ± 0.0000,-0.4379 ± 0.2554,54.2225,0.0000,***
-Omega,nan ± nan,2.0060 ± 1.1812,nan,nan,
