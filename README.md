@@ -4,7 +4,7 @@
 
 ## 📌 Project Overview
 
-This project aims to compare the performance of **financial-statement-based clustering** and **GICS-based classification** in constructing stock portfolios. Using the same optimization method and performance evaluation criteria, we empirically examine whether machine learning-based clusters outperform traditional industry-based groupings.
+This project aims to evaluate the performance of **financial-statement-based clustering** in constructing stock portfolios. Using the portfolio optimization method and performance evaluation criteria, we empirically examine whether machine learning-based clusters outperform itself, and compared to traditional industry-based groupings.
 
 ---
 
@@ -27,17 +27,35 @@ This project aims to compare the performance of **financial-statement-based clus
 
 ### 1. Clustering Approaches
 
+  The Clustering method is constructed based on two major purposes, which are comparing the portfolios of random selected portfolios vs. financial-based clustered portfolios; and GICS-based clustered portfoilos vs. financial-based clustered portfoilos.
+
+  For the GICS vs. Financial-Based, there was no window slicing, just containing 3 years of in-sample and 2 years of out-sample.
+
+  For the Random vs. Financial-Based, the windows were evaluated seperately, each containing 2 years of in-sample and 1 year of out-sample.
+
+#### 1-1. GICS vs. Financial-Based
+
 * **GICS-Based**:
   Uses sector-level GICS clusters directly.
 
 * **Financial-Based (KMeans)**:
   Applies KMeans clustering with the same number of clusters as in the GICS dataset.
 
+#### 1-2. Random vs. Financial-Based
+
+* **Financial-Based**:
+  Used optimized k (num of clusters) respectively on K-Means, GMM, and Spectral Clustering for each window
+
 ### 2. Portfolio Construction
 
 * **Inter-Cluster Sampling**:
   One stock is sampled from each cluster to construct a portfolio.
   Repeated 1,000 times to ensure statistical robustness.
+
+* **Random Sampling**
+  One stock is sampled matching the size of the Inter-Cluster Portfolio.
+  Repeated 1,000 times to ensure statistical robustness.
+
 
 ### 3. Portfolio Optimization
 
@@ -90,31 +108,41 @@ $$
 
 ### 5. Evaluation Periods
 
-* **In-Sample**: 2020–2022
-* **Out-of-Sample**: 2023–2024
+#### For Random vs. Financial Statement
+
+* **In-Sample**: 2020–2021, 2021-2022, 2022-2023 (2yrs per window)
+* **Out-of-Sample**: 2022, 2023, 2024 (1yr per window)
+
+#### For GICS vs. Financial Statement
+
+* **In-Sample**: 2020–2022 (3yrs, single window)
+* **Out-of-Sample**: 2023-2024 (2yrs, single window)
+
 
 ---
 
 ## 📊 Result Structure
 
 * Results are saved under:
+  `results/{window}/ttest_{window}_{method}_{sample_type}.csv`
   `results/gics_vs_kmeans/ttest_gics_vs_kmeans_{method}_{sample_type}.csv`
 
 * Each CSV file includes:
 
   * Mean ± Standard Deviation of performance metrics
   * One-sided t-test statistics comparing KMeans > GICS
-  * Significance level indicators (`*, **, ***`)
+  * Significance level indicators (`<0.1 : *, <0.05: **, <0.01: ***`)
 
 ---
 
 ## 🔁 Workflow Summary
 
 1. Perform KMeans clustering on financial features.
-2. Construct 1,000 inter-cluster portfolios for both GICS and KMeans clusters.
-3. Optimize portfolios using Markowitz with a minimum variance constraint.
-4. Evaluate each portfolio’s in-sample and out-of-sample performance.
-5. Conduct statistical tests to compare methods.
+2. Construct 1,000 inter-cluster portfolios for both Random and Financial Statement based Clusters.
+3. Construct 1,000 inter-cluster portfolios for both GICS and Financial Statement based Clusters.
+4. Optimize portfolios using Markowitz with a minimum variance constraint.
+5. Evaluate each portfolio’s in-sample and out-of-sample performance.
+6. Conduct statistical tests to compare methods.
 
 ---
 
@@ -137,10 +165,11 @@ $$
 
 ## 👤 Author
 
-* **Name**: Taekyoung Lee (이태경)
+* **Name**: Taekyoung Lee , Sungsu Park
 * **Affiliation**: Kyung Hee University
 
-  * Department of Industrial & Management Engineering
-  * School of Software Convergence
+  * Department of Industrial & Management Engineering, Software Convergence
+  * School of Engineering, Software Convergence
+
 * **Research Focus**:
-  Machine Learning for Asset Selection, Clustering-Based Portfolio Optimization, Financial Engineering
+  Machine Learning for Asset Selection, Portfolio Optimization, Risk Management, Financial Engineering
