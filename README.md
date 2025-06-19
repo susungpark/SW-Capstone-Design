@@ -124,8 +124,8 @@ $$
 ## 📊 Result Structure
 
 * Results are saved under:
-  `results/{window}/ttest_{window}_{method}_{sample_type}.csv`
-  `results/gics_vs_kmeans/ttest_gics_vs_kmeans_{method}_{sample_type}.csv`
+  - `results/{window}/ttest_{window}_{method}_{sample_type}.csv`
+  - `results/gics_vs_kmeans/ttest_gics_vs_kmeans_{method}_{sample_type}.csv`
 
 * Each CSV file includes:
 
