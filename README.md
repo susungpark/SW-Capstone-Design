@@ -161,6 +161,36 @@ $$
 * Add constraints (e.g., minimum number of stocks per cluster)
 * Use Explainable AI for cluster interpretation
 
+
+---
+
+## 💻 How to Run the Code
+
+1. Clone this repository
+2. Install required libraries:
+  -> Check "Technologies and Libraries Section"
+
+
+### ✅ Demo (예시 결과 출력)**  
+- 포함 여부: **부분 포함**  
+- 섹션:
+  - `## 📊 Result Structure`  
+    → 출력파일 형식, 저장 경로, 지표 포함 내용 설명 있음
+  - 하지만 **실제 예시 출력 스크린샷, 표, 결과 요약**은 없음
+
+**→ 개선 제안**:
+- 아래 예시처럼 **출력된 CSV 일부 예제 표** 혹은 **스크린샷** 추가:
+
+```markdown
+### 📁 Example Output
+
+| Metric  | KMeans Mean±Std | GICS Mean±Std | t-stat | p-value | Signif. |
+|---------|------------------|----------------|--------|---------|---------|
+| CVaR | 0.4213 ± 0.0234  | 0.3841 ± 0.0218| 2.114  | 0.0184  | **     |
+
+** The example output may differ from the actual results
+
+
 ---
 
 ## 👤 Author
