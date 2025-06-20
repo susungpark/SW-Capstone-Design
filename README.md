@@ -2,13 +2,13 @@
 
 ## Reflections on improving portfolio downside risk through financial statement-based clustering methodologies
 
-## 📌 Project Overview
+## Project Overview
 
 This project aims to evaluate the performance of **financial-statement-based clustering** in constructing stock portfolios. Using the portfolio optimization method and performance evaluation criteria, we empirically examine whether machine learning-based clusters outperform in portfolio evaluation metrics, compared to traditional groupings.
 
 ---
 
-## 🗂️ Data Description
+## Data Description
 
 ### Input Files
 
@@ -48,7 +48,7 @@ This project aims to evaluate the performance of **financial-statement-based clu
 * **Minimum Variance Portfolio with Target Return Constraint**
   Target returns range from 0.5% to 5.0% (in 0.5% increments).
 
-#### 📐 Objective Function (Minimum Variance Portfolio)
+#### Objective Function (Minimum Variance Portfolio)
 
 $$
 \min_{w} \ w^T \Sigma w \\
@@ -66,7 +66,7 @@ Where:
 
 ### 4. Performance Metrics
 
-#### 📊 Evaluation Criteria
+#### Evaluation Criteria
 
 * **Sortino Ratio**:
 
@@ -102,7 +102,7 @@ $$
 
 ---
 
-## 📊 Result Structure
+## Result Structure
 
 * Results are saved under:
   - `results/{window}/ttest_{window}_{method}_{sample_type}.csv`
@@ -116,7 +116,7 @@ $$
 
 ---
 
-## 🔁 Workflow Summary
+## Workflow Summary
 
 1. Perform KMeans clustering on financial features.
 2. Construct 1,000 inter-cluster portfolios for both Random and Financial Statement based Clusters.
@@ -126,7 +126,7 @@ $$
 
 ---
 
-## 🧪 Technologies & Libraries
+## Technologies & Libraries
 
 * Python (pandas, numpy, scikit-learn, scipy, statsmodels, matplotlib, seaborn)
 * Optimization via `scipy.optimize.minimize`
@@ -134,20 +134,20 @@ $$
 
 ---
 
-## 💻 How to Run the Code
+## How to Run the Code
 
 1. Clone this repository
 2. Install required libraries:
   -> Check "Technologies and Libraries Section"
 
 
-### ✅ Demo (Sample Results)**  
+### Demo (Sample Results)**  
 - Section:
-  - `## 📊 Result Structure`  
+  - `## Result Structure`  
   - The actual results are saved in the code/results folder
 
 
-### 📁 Example Output
+### Example Output
 
 | Metric | KMeans Mean±Std   | GICS Mean±Std    | t-stat | p-value | Signif. |
 |--------|-------------------|------------------|--------|---------|---------|
@@ -158,7 +158,7 @@ $$
 
 ---
 
-## 👤 Author
+## Author
 
 * **Name**: Taekyoung Lee , Sungsu Park
 * **Affiliation**: Kyung Hee University
