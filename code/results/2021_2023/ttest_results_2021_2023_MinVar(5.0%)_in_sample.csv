@@ -1,5 +1,5 @@
 ﻿,Inter Mean±Std,Random Mean±Std,t-stat,p-value,Significance
 Sortino,nan ± nan,nan ± nan,nan,nan,
-CVaR,0.0192 ± 0.0013,0.0181 ± 0.0018,6.2566,0.0000,***
+CVaR,0.0192 ± 0.0013,0.0182 ± 0.0019,5.2549,0.0000,***
 MDD,0.0000 ± 0.0000,0.0000 ± 0.0000,nan,nan,
 Omega,nan ± nan,nan ± nan,nan,nan,
